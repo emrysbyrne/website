@@ -256,97 +256,27 @@ function staggerReveal(selector, delay) {
 
 /* ============================================
    NEWSLETTER FORM
-   Mailchimp integration with JSONP
+   Mailchimp integration
    ============================================ */
 function initNewsletterForm() {
     const form = document.getElementById('newsletterForm');
     if (!form) return;
 
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
+    form.addEventListener('submit', (e) => {
         const input = form.querySelector('input[name="EMAIL"]');
         const button = form.querySelector('button');
         const email = input.value.trim();
 
-        if (!email) return;
-
-        // Visual feedback
-        button.textContent = 'Joining...';
-        button.disabled = true;
-
-        try {
-            const result = await submitToMailchimp(email);
-
-            if (result.result === 'success') {
-                button.textContent = 'Welcome!';
-                input.value = '';
-                input.placeholder = 'You\'re in the grove';
-            } else {
-                // Handle already subscribed or other messages
-                const msg = result.msg || '';
-                if (msg.includes('already subscribed')) {
-                    button.textContent = 'Already in!';
-                    input.value = '';
-                } else {
-                    button.textContent = 'Try again';
-                    console.warn('Mailchimp:', msg);
-                }
-            }
-        } catch (err) {
-            // Fallback: submit normally (opens Mailchimp page)
-            console.warn('JSONP failed, submitting normally');
-            form.submit();
+        if (!email) {
+            e.preventDefault();
             return;
         }
 
-        // Reset after delay
-        setTimeout(() => {
-            button.textContent = 'Subscribe';
-            button.disabled = false;
-            input.placeholder = 'Your email address';
-        }, 3000);
-    });
-}
+        // Visual feedback before redirect
+        button.textContent = 'Joining...';
+        button.disabled = true;
 
-function submitToMailchimp(email) {
-    return new Promise((resolve, reject) => {
-        // Create unique callback name
-        const callbackName = 'mc_callback_' + Date.now();
-
-        // Build JSONP URL
-        const baseUrl = 'https://emrysbyrne.us8.list-manage.com/subscribe/post-json';
-        const params = new URLSearchParams({
-            u: '87a80e9f2a07b20c178456b4c',
-            id: '9cd74a827b',
-            EMAIL: email,
-            c: callbackName
-        });
-
-        // Set up callback
-        window[callbackName] = (response) => {
-            delete window[callbackName];
-            document.body.removeChild(script);
-            resolve(response);
-        };
-
-        // Create script tag for JSONP
-        const script = document.createElement('script');
-        script.src = `${baseUrl}?${params.toString()}`;
-        script.onerror = () => {
-            delete window[callbackName];
-            reject(new Error('JSONP request failed'));
-        };
-
-        // Timeout after 10 seconds
-        setTimeout(() => {
-            if (window[callbackName]) {
-                delete window[callbackName];
-                reject(new Error('JSONP timeout'));
-            }
-        }, 10000);
-
-        document.body.appendChild(script);
+        // Form submits normally to Mailchimp (opens in new tab)
     });
 }
 
