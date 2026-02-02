@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emrys Byrne | Fantasy Author</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Ambient particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Floating leaves decoration -->
+    <div class="floating-leaves" id="floatingLeaves"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">EB</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#books">Books</a>
+                <a href="#newsletter">Newsletter</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+            <a href="#about">About</a>
+            <a href="#books">Books</a>
+            <a href="#newsletter">Newsletter</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="tree2.svg" class="tree-silhouette tree-1" alt="">
+            <img src="tree2.svg" class="tree-silhouette tree-2" alt="">
+            <img src="tree3.svg" class="tree-silhouette tree-3" alt="">
+            <img src="tree4.svg" class="tree-silhouette tree-4" alt="">
+            <div class="mist mist-1"></div>
+            <div class="mist mist-2"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">Emrys</span>
+                <span class="title-line">Byrne</span>
+            </h1>
+            <p class="hero-tagline">Writer of epic fantasy.</p>
+            <div class="hero-cta">
+                <a href="#books" class="btn btn-primary">Explore the Books</a>
+                <a href="#newsletter" class="btn btn-ghost">Join the Newsletter</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-bg">
+            <div class="wood-texture"></div>
+        </div>
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <img src="author.jpg" alt="Emrys Byrne - Author">
+                        <div class="frame-corner frame-tl"></div>
+                        <div class="frame-corner frame-tr"></div>
+                        <div class="frame-corner frame-bl"></div>
+                        <div class="frame-corner frame-br"></div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title">
+                        <span class="title-decoration">~</span>
+                        About the Author
+                        <span class="title-decoration">~</span>
+                    </h2>
+                    <div class="about-text">
+                        <p class="lead">Emrys Byrne writes epic fantasy in the old tradition &mdash; big stories, flawed people, and magic that leaves marks.</p>
+                        <p>He grew up on Tolkien, cut his teeth on George R.R. Martin, and keeps returning to Ursula K. Le Guin when he needs to remember why any of this matters.</p>
+                        <p><em>The Shield of the People</em> is his debut novel.</p>
+                    </div>
+                    <div class="about-signature">
+                        <svg viewBox="0 0 200 60" class="signature">
+                            <path d="M20 45 Q40 20 60 40 T100 35 T140 40 Q160 45 180 30" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Books Section -->
+    <section class="books" id="books">
+        <div class="container">
+            <h2 class="section-title centered">
+                <span class="title-decoration">~</span>
+                Books
+                <span class="title-decoration">~</span>
+            </h2>
+
+            <div class="books-grid books-single">
+                <!-- The Shield of the People -->
+                <article class="book-card book-featured">
+                    <div class="book-cover">
+                        <img src="book-cover.jpg" alt="The Shield of the People - Book Cover">
+                        <div class="coming-soon-badge">Coming Soon</div>
+                        <div class="book-spine"></div>
+                    </div>
+                    <div class="book-info">
+                        <span class="book-series">Epic Fantasy &middot; First in a Series</span>
+                        <h3 class="book-title">The Shield of the People</h3>
+                        <p class="book-desc">Thadeon of the Aldeaaris is the general who keeps a fractured alliance from war. His brother Thamred is the young paladin with magic Thadeon will never have. Delaine is the mage Thadeon loves, the outsider his family despises, and the closest thing Thamred has to a sister.</p>
+                        <p class="book-desc">When the queen is murdered, Thadeon watches religious fervor sweep through Balneor like fire through dry grass. The holy man his family trusted for decades is fanning the flames, and the alliance Thadeon fought to hold together is already fracturing. Sending Thamred and Delaine to safety, he rides to prevent a war that's already closer than anyone knows.</p>
+                        <p class="book-desc book-desc-final">But safety is an illusion, and the war Thadeon hoped to prevent has already begun.</p>
+                        <a href="#newsletter" class="btn btn-primary">Get Notified</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter" id="newsletter">
+        <div class="container">
+            <div class="newsletter-card">
+                <div class="newsletter-decor">
+                    <svg viewBox="0 0 100 100" class="branch-left">
+                        <path d="M0 50 Q30 50 50 30 T80 40" stroke="currentColor" fill="none" stroke-width="2"/>
+                        <circle cx="50" cy="30" r="4" fill="currentColor" opacity="0.5"/>
+                        <circle cx="80" cy="40" r="3" fill="currentColor" opacity="0.5"/>
+                    </svg>
+                    <svg viewBox="0 0 100 100" class="branch-right">
+                        <path d="M100 50 Q70 50 50 30 T20 40" stroke="currentColor" fill="none" stroke-width="2"/>
+                        <circle cx="50" cy="30" r="4" fill="currentColor" opacity="0.5"/>
+                        <circle cx="20" cy="40" r="3" fill="currentColor" opacity="0.5"/>
+                    </svg>
+                </div>
+                <h2 class="newsletter-title">Join the Newsletter</h2>
+                <p class="newsletter-text">Be the first to hear about new releases, updates, and more.</p>
+                <form class="newsletter-form" id="newsletterForm"
+                      action="https://emrysbyrne.us8.list-manage.com/subscribe/post?u=87a80e9f2a07b20c178456b4c&amp;id=9cd74a827b"
+                      method="post" target="_blank">
+                    <div class="form-group">
+                        <input type="email" name="EMAIL" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                    <p class="form-note">No spam. Unsubscribe anytime.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title centered">
+                <span class="title-decoration">~</span>
+                Contact
+                <span class="title-decoration">~</span>
+            </h2>
+            <div class="contact-content">
+                <p>For inquiries, please contact:</p>
+                <a href="mailto:contact@emrysbyrne.com" class="contact-email">contact@emrysbyrne.com</a>
+                <div class="social-links">
+                    <a href="https://facebook.com/emrysbyrne" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2z"/>
+                        </svg>
+                    </a>
+                    <a href="https://x.com/emrysbyrne" class="social-link" aria-label="X" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://bsky.app/profile/emrysbyrne.bsky.social" class="social-link" aria-label="Bluesky" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 600 530" fill="currentColor">
+                            <path d="M135.7 44.3c66.2 49.5 137.5 149.8 164.3 203.8 26.8-54 98.1-154.3 164.3-203.8 47.6-35.6 124.6-63.2 124.6 24.4 0 17.5-10 147.2-15.9 168.2-20.4 73.3-95 92-162.8 80.7 118.6 20.2 148.8 87 83.6 153.8-124.1 127-178.5-31.8-192.4-72.5-2.5-7.3-3.7-10.7-3.7-7.8 0-2.9-1.2.5-3.7 7.8-13.9 40.7-68.3 199.4-192.4 72.5-65.2-66.8-35-133.6 83.6-153.8-67.8 11.3-142.4-7.4-162.8-80.7-5.9-21-15.9-150.7-15.9-168.2 0-87.6 77-60 124.6-24.4z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/emrysbyrne" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-roots"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Emrys Byrne</div>
+                <p class="footer-text">&copy; 2026 Emrys Byrne. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
