@@ -265,9 +265,9 @@ function initNewsletterForm() {
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        const input = form.querySelector('input[type="email"]');
+        const input = form.querySelector('input[name="EMAIL"]');
         const button = form.querySelector('button');
-        const email = input.value;
+        const email = input.value.trim();
 
         if (!email) return;
 
